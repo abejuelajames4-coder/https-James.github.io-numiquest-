@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Welcome to NumiQuest, a gamified learning system designed to enhance the General Mathematics skills of Grade 11 students."
+    >
+
+    <meta name="theme-color" content="#173b70">
+
+    <title>Welcome to NumiQuest | Learn, Play, Grow</title>
+
+    <!-- Website Favicon -->
+    <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- JavaScript Files -->
+    <script src="/js/i18n.js" defer></script>
+    <script src="/js/common.js" defer></script>
+    <script src="/js/landing.js" defer></script>
+</head>
+
+<body>
+    <main class="scene landing">
+
+        <!-- Main Welcome Section -->
+        <section class="welcome-content" aria-labelledby="page-title">
+
+            <!-- Logo -->
+            <a class="brand" href="/" aria-label="NumiQuest Home">
+                <img
+                    class="hero-logo"
+                    src="/img/logo.svg"
+                    alt="NumiQuest logo"
+                    width="100"
+                    height="100"
+                >
+            </a>
+
+            <!-- Website Title -->
+            <h1 id="page-title">NumiQuest</h1>
+
+            <p class="brand-tagline">Learn. Play. Grow.</p>
+
+            <p class="tag" data-i18n="tagline">
+                A Gamified Learning System for Enhancing the Numeracy
+                Skills of Grade 11 Students
+            </p>
+
+            <p class="welcome-message">
+                Choose your account type to begin your learning journey.
+            </p>
+
+            <!-- Account Selection -->
+            <div class="role-cards">
+
+                <!-- Student Account -->
+                <section
+                    class="role-card student-card"
+                    aria-labelledby="student-title"
+                >
+                    <div class="role-icon" aria-hidden="true">🎓</div>
+
+                    <h2 id="student-title" data-i18n="im_student">
+                        I am a Student
+                    </h2>
+
+                    <p class="role-description">
+                        Learn General Mathematics, complete quizzes,
+                        earn XP, and unlock educational games.
+                    </p>
+
+                    <div class="role-actions">
+                        <a
+                            class="btn btn-blue btn-block"
+                            href="/student-login.html"
+                            data-i18n="login"
+                        >
+                            Student Login
+                        </a>
+
+                        <a
+                            class="btn btn-outline btn-block"
+                            href="/student-register.html"
+                            data-i18n="register"
+                        >
+                            Create Student Account
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Teacher Account -->
+                <section
+                    class="role-card teacher-card"
+                    aria-labelledby="teacher-title"
+                >
+                    <div class="role-icon" aria-hidden="true">📚</div>
+
+                    <h2 id="teacher-title" data-i18n="im_teacher">
+                        I am a Teacher
+                    </h2>
+
+                    <p class="role-description">
+                        Manage learning materials, publish quizzes,
+                        and monitor student progress.
+                    </p>
+
+                    <div class="role-actions">
+                        <a
+                            class="btn btn-blue btn-block"
+                            href="/teacher-login.html"
+                            data-i18n="login"
+                        >
+                            Teacher Login
+                        </a>
+
+                        <a
+                            class="btn btn-outline btn-block"
+                            href="/teacher-register.html"
+                            data-i18n="register"
+                        >
+                            Create Teacher Account
+                        </a>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Footer -->
+            <footer class="landing-footer">
+                <p>
+                    NumiQuest &copy; <span id="current-year">2026</span>
+                </p>
+                <p>Making Mathematics more engaging, one quest at a time.</p>
+            </footer>
+
+        </section>
+    </main>
+
+    <!-- Landing Page Enhancements -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const yearElement = document.getElementById("current-year");
+
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
